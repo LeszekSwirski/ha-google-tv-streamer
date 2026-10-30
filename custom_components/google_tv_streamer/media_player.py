@@ -112,6 +112,10 @@ class GoogleTVStreamerMediaPlayer(
         position_ms = media.get("position_ms")
         return None if position_ms is None else position_ms / 1000
 
+    @property
+    def media_position_updated_at(self):
+        return self.coordinator.data.get("position_updated_at") if self.media_position is not None else None
+
     async def async_media_play(self) -> None:
         """Send play/pause key event."""
         await self.hass.async_add_executor_job(self.adb.key_event, KEY_COMMANDS["play_pause"])

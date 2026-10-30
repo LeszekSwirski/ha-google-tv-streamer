@@ -1,12 +1,16 @@
 {
   "domain": "google_tv_streamer",
   "name": "Google TV Streamer",
-  "version": "0.1.2",
-  "documentation": "https://github.com/parkercombes/ha-google-tv-streamer",
-  "issue_tracker": "https://github.com/parkercombes/ha-google-tv-streamer/issues",
-  "codeowners": ["@parkercombes"],
+  "version": "0.1.3",
+  "documentation": "https://github.com/LeszekSwirski/ha-google-tv-streamer",
+  "issue_tracker": "https://github.com/LeszekSwirski/ha-google-tv-streamer/issues",
+  "codeowners": [
+    "@parkercombes"
+  ],
   "config_flow": true,
   "iot_class": "local_polling",
   "integration_type": "device",
-  "requirements": ["adb-shell[async]>=0.4.4"]
+  "requirements": [
+    "adb-shell[async]>=0.4.4"
+  ]
 }

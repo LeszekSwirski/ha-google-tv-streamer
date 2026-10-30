@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 import logging
 from typing import Any
+from homeassistant.util import dt as dt_util
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
@@ -43,4 +44,5 @@ class GoogleTVStreamerDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]
         return {
             "current_app": current_app,
             "now_playing": now_playing,
+            "position_updated_at": dt_util.utcnow(),
         }
